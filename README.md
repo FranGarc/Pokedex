@@ -5,10 +5,9 @@ POC app using [pokemon api](https://pokeapi.co/docs/v2) to practice android/kotl
 ## Table of contents
 
 * [Requisites](#requisites)
-* [Analysis](#analisis)
+* [Analysis](#analysis)
 * [Architecture](#architecture)
 * [Technologies](#technologies)
-* [Future iterations](#future-iterations)
 * [Credits](#credits)
 
 ## Requisites
@@ -42,10 +41,33 @@ A settings option
 
 ## Analysis
 
-We'll need 
+We'll need
 
+* UI library for screens design and navigation (Jetpack Compose)
+* HTTP client for kotlin to interact with the API: Retrofit
+* A Library to load images from URL that is compatible with UI library: Coil-Compose
+* A local database: Room
+* A way to persist the user's configuration of the app: Data Storage
+* A framework to assist with the Dependency Injection
+
+Entities:
+
+* PokedexList and PokedexListEntry
+* PokedexPokemon to see the details
+* MyPokemonList and MyPokemonListEntry for the user's caught pokemon
+* MyPokemon to see the details of any user's caught pokemon (including nickname and date of capture)
+
+UseCases:
+
+* GetPokedexList
+* GetPokedexPokemonDetails
+* CatchPokemon
+* GetMyList
+* GetMyPokemonDetails
 
 ## Architecture
+
+We'll opt for the 3 layers (presentation, domain, data) clean architecture.
 
 ### Design and Presentation Patterns
 
@@ -62,7 +84,7 @@ Project is created with:
 * Navigation component (navigation between screens)
 * Room database (data persistance)
 * Dagger Hilt (dependencies injection)
-* Data Storage (settings, images cache)
+* Data Storage (settings)
 
 ## Credits
 

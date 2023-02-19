@@ -1,6 +1,6 @@
 # Pokedex
 
-POC app using [pokemon api](https://pokeapi.co/docs/v2) to practice android/kotlin
+POC app using [pokeapi](https://pokeapi.co/docs/v2) to practice android/kotlin
 
 ## Table of contents
 
@@ -12,34 +12,60 @@ POC app using [pokemon api](https://pokeapi.co/docs/v2) to practice android/kotl
 
 ## Requisites
 
-At launch, the Pokedex will will download the full available list of pokemon
-from  [pokemon api](https://pokeapi.co/docs/v2). If the number of pokemon is bigger than the number
-of pokemon stored in the pokedex database, the newer pokemon list will be saved to the local
-database.
+### User Stories
 
-The Pokedex screen will show the entries in the pokemon list saved in the database.
+1. As user, when I launch the app I want to see the full list of existing pokemon so I can scroll
+   through it.
+2. As user, when I launch the app, if I have no connectivity, I want to see the last downloaded
+   list, so I can scroll through it.
+3. As user, I want the default order of the downloaded list to be by pokemon number, so that
+   different stages of evolution remain next to each other.
+4. As user, I want the list entries to contain the species name and the picture of each pokemon.
+5. As user, I want to be able to search for a specific pokemon by entering all or part of its
+   species name.
+6. As user, when I tap on one of the pokemon list entries, I want to see more information of that
+   pokemon.
+7. As user, when I see the information of a pokemon, I want to be able to catch it.
+8. As user, when I catch a pokemon, I want to be given the option to give it a nickname.
+9. As user, I want to be able to see the list of pokemon I've caught, so I can scroll through it.
+10. As user, I want the list of my captured pokemon to use the nickname instead of the species name.
+11. As user, I want to be able to search for a specific pokemon by entering all or part of its
+    nickname (or species name, if no nickname was chosen).
+12. As user, I want to be able to order my captured pokemon list by different criteria: date of
+    capture, nickname, pokedex number (see story #3)
+
+## Analysis
+
+### UI Design (Wireframe)
+
+### Implementation Details
+
+At launch, the Pokedex will download the full available list of pokemon
+from  [pokeapi](https://pokeapi.co/docs/v2). If the number of pokemon is bigger than the number
+of pokemon stored in the pokedex database, the newer pokemon list will be saved to the local
+database. This can be done during a splash screen.
+
+The Pokedex screen will show the pokemon from the list that was saved in the database.
 
 Tapping on one of the entries will open a Detail screen where more information of the pokemon will
-be retrieved from the api and displayed on the screen.
+be retrieved from the pokeapi and displayed on the screen.
 
 The detail screen will have an option to "catch" the pokemon, saving it to a personal list of
-caught pokemon. Catching a pokemon gives the user the chance to give it a nickname.
+pokemon captured by the user. Catching a pokemon gives the user the chance to give it a nickname. It
+will default to the pokemon species name, but the user will be able to edit it. An empty nickname
+will also default to the species name.
 
-The app will also have a screen to show a list of "caught pokemon". In this list, any caught
-pokemon with a nickname given by the user will display said nickname - e.g. "Roger" instead of "
+The app will also have a screen to show a list of "pokemon captured by the user". In this list, any
+pokemon the user captured, showing the nickname given by the user - e.g. "Roger" instead of "
 Pikachu".
 
 Any pokemon list (both pokedex and caught) will display its entries' name (or nickname) and image.
 
-Any pokemon list (both pokedex and caught) screen will have a search bar on the top of the screen
-which will work as live search box.
-
 The app will have a botton navigation component to choose which of the lists the user wants to see.
-The default list will be the "pokedex list".
+
+The default screen will be the "pokedex list".
 
 A settings option
-
-## Analysis
 
 We'll need
 
@@ -54,7 +80,7 @@ Entities:
 
 * PokedexList and PokedexListEntry
 * PokedexPokemon to see the details
-* MyPokemonList and MyPokemonListEntry for the user's caught pokemon
+* MyPokemonList and MyPokemonListEntry for the pokemon captured by the user
 * MyPokemon to see the details of any user's caught pokemon (including nickname and date of capture)
 
 UseCases:

@@ -18,25 +18,26 @@ POC app using [pokeapi](https://pokeapi.co/docs/v2) to practice android/kotlin
    through it.
 2. As user, when I launch the app, if I have no connectivity, I want to see the last downloaded
    list, so I can scroll through it.
-3. As user, I want the default order of the downloaded list to be by pokemon number, so that
-   different stages of evolution remain next to each other.
-4. As user, I want the list entries to contain the species name and the picture of each pokemon.
-5. As user, I want to be able to search for a specific pokemon by entering all or part of its
+3. As user, I want the list entries to contain the species name and the picture of each pokemon.
+4. As user, I want to be able to search for a specific pokemon by entering all or part of its
    species name.
-6. As user, when I tap on one of the pokemon list entries, I want to see more information of that
+5. As user, when I tap on one of the pokemon list entries, I want to see more information of that
    pokemon.
-7. As user, when I see the information of a pokemon, I want to be able to catch it.
-8. As user, when I catch a pokemon, I want to be given the option to give it a nickname.
-9. As user, I want to be able to see the list of pokemon I've caught, so I can scroll through it.
-10. As user, I want the list of my captured pokemon to use the nickname instead of the species name.
-11. As user, I want to be able to search for a specific pokemon by entering all or part of its
+6. As user, when I see the information of a pokemon, I want to be able to catch it.
+7. As user, when I catch a pokemon, I want to be given the option to give it a nickname.
+8. As user, I want to be able to see the list of pokemon I've caught, so I can scroll through it.
+9. As user, I want the list of my captured pokemon to use the nickname instead of the species name.
+10. As user, I want to be able to search for a specific pokemon by entering all or part of its
     nickname (or species name, if no nickname was chosen).
-12. As user, I want to be able to order my captured pokemon list by different criteria: date of
+11. As user, I want to be able to order my captured pokemon list by different criteria: date of
     capture, nickname, pokedex number (see story #3)
 
 ## Analysis
 
 ### UI Design (Wireframe)
+
+![Master list screen](https://github.com/FranGarc/Pokedex/blob/main/screenshots/pokedex_list.png)
+![Detail screen](https://github.com/FranGarc/Pokedex/blob/main/screenshots/pokemon_detail.png)
 
 ### Implementation Details
 

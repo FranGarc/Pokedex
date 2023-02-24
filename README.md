@@ -34,6 +34,68 @@ POC app using [pokeapi](https://pokeapi.co/docs/v2) to practice android/kotlin
 
 ## Analysis
 
+### Milestones
+
+#### Milestone 0. Project Setup.
+
+##### Repository branches.
+
+Branch Master will be used for releases.
+
+Branch Develop will hold the progress of the tasks.
+
+##### Git Flow.
+
+Each Milestone will be a new branch from Develop. No new Milestone branches while the existing one
+hasn't been merged into Develop definitely.
+
+    E.g.: /milestone01
+
+Each User Story will be coded in a new branch from its Milestone Branch. Once it's finished, we'll
+open a PR to review it and merge it into the Milestone Branch again.
+
+    E.g.: /milestone01/us01-list-all-pokemon
+
+Once all User Stories have been merged into the Milestone Branch, this later can be merged into
+Develop, with the milestone tag, for testing.
+
+    E.g.: tag M.1
+
+If any bugs arise during testing, the relevant hotfix will be applied and it will be tested again.
+
+    E.g.: /milestone01/hotfix-tapping-reveals-wrong-pokemon-details
+
+Once testing results are satisfactory, current milestone can be released - i.e., merged into Master
+and tagged with the proper version.
+
+    E.g.: tag v-1.0.0
+
+##### Android Project setup.
+
+Create BuildSrc module for Dependency management.
+
+Include all dependencies listed in [Technologies](#technologies)
+
+Create data and domain modules.
+
+#### Milestone 1. Remote Data.
+
+For the first milestone, we'll include the US 1, 3, 5, which involve connecting to the API and
+retrieving remote data.
+
+Tasks:
+
+1. Create Entry component, which will hold the name and picture of the pokemon for the list.
+2. Create a Detail Screen as per the wireframes. It will receive the pokemon object to be displayed
+3. Create a PokedexList Screen which will display the entries received from the API, using the
+   component cretaed in #1
+4. Set up the navigation from the PokedexList Screen to the Detail Screen
+
+We will develop the list screen as the wireframes show. We won't add behaviours for the bottom
+navigation nor for the search bar.
+
+##### Tasks for Milestone 1
+
 ### UI Design (Wireframe)
 
 <img  alt="Master list screen" src="https://github.com/FranGarc/Pokedex/blob/master/screenshots/pokedex_list.png" width="200" heght="300"/>
@@ -113,6 +175,7 @@ Project is created with:
 * Room database (data persistance)
 * Dagger Hilt (dependencies injection)
 * Data Storage (settings)
+* Timber (logging)
 
 ## Credits
 

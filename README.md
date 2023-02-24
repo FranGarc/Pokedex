@@ -36,8 +36,9 @@ POC app using [pokeapi](https://pokeapi.co/docs/v2) to practice android/kotlin
 
 ### UI Design (Wireframe)
 
-![Master list screen](https://github.com/FranGarc/Pokedex/blob/master/screenshots/pokedex_list.png)
-![Detail screen](https://github.com/FranGarc/Pokedex/blob/master/screenshots/pokemon_detail.png)
+<img  alt="Master list screen" src="https://github.com/FranGarc/Pokedex/blob/master/screenshots/pokedex_list.png" width="200" heght="300"/>
+
+<img  alt="Detail screen" src="https://github.com/FranGarc/Pokedex/blob/master/screenshots/pokemon_detail.png" width="200" heght="300"/>
 
 ### Implementation Details
 

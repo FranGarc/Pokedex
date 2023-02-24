@@ -49,12 +49,12 @@ Branch Develop will hold the progress of the tasks.
 Each Milestone will be a new branch from Develop. No new Milestone branches while the existing one
 hasn't been merged into Develop definitely.
 
-    E.g.: /milestone01
+    E.g.: milestone01
 
 Each User Story will be coded in a new branch from its Milestone Branch. Once it's finished, we'll
 open a PR to review it and merge it into the Milestone Branch again.
 
-    E.g.: /milestone01/us01-list-all-pokemon
+    E.g.: task/us01-list-all-pokemon
 
 Once all User Stories have been merged into the Milestone Branch, this later can be merged into
 Develop, with the milestone tag, for testing.
@@ -63,7 +63,7 @@ Develop, with the milestone tag, for testing.
 
 If any bugs arise during testing, the relevant hotfix will be applied and it will be tested again.
 
-    E.g.: /milestone01/hotfix-tapping-reveals-wrong-pokemon-details
+    E.g.: hotfix/tapping-reveals-wrong-pokemon-details
 
 Once testing results are satisfactory, current milestone can be released - i.e., merged into Master
 and tagged with the proper version.
@@ -83,7 +83,7 @@ Create data and domain modules.
 For the first milestone, we'll include the US 1, 3, 5, which involve connecting to the API and
 retrieving remote data.
 
-Tasks:
+##### Tasks for Milestone 1
 
 1. Create Entry component, which will hold the name and picture of the pokemon for the list.
 2. Create a Detail Screen as per the wireframes. It will receive the pokemon object to be displayed
@@ -93,8 +93,6 @@ Tasks:
 
 We will develop the list screen as the wireframes show. We won't add behaviours for the bottom
 navigation nor for the search bar.
-
-##### Tasks for Milestone 1
 
 ### UI Design (Wireframe)
 

@@ -9,6 +9,10 @@ object Versions {
     const val jUnit = "4.12"
 
 
-    const val compose_version = "1.2.0"
+    const val compose_version = "1.3.1"
+    const val lifecycle_version = "2.5.1"
+
+    const val daggerHilt = "2.44"
+    const val gson = "2.10"
 
 }

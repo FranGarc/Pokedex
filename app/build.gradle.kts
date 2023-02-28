@@ -2,6 +2,7 @@ plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("kotlin-kapt")
+    id("com.google.dagger.hilt.android")
 }
 
 android {
@@ -38,7 +39,7 @@ android {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.2.0"
+        kotlinCompilerExtensionVersion = Versions.compose_version
     }
     packagingOptions {
         resources {
@@ -50,15 +51,28 @@ android {
 dependencies {
 
     implementation(Dependencies.Androidx.core)
-    implementation(Dependencies.Androidx.lifecycle)
+
+    implementation(Dependencies.Androidx.Lifecycle.viewModel)
+    implementation(Dependencies.Androidx.Lifecycle.runtime)
+    implementation(Dependencies.Androidx.Lifecycle.runtimeKtx)
     implementation(Dependencies.Androidx.activityCompose)
     implementation(Dependencies.Androidx.Compose.ui)
     implementation(Dependencies.Androidx.Compose.preview)
     implementation(Dependencies.Androidx.Compose.material3)
+
+    // DI
+    implementation(Dependencies.Google.Dagger.hilt)
+    kapt(Dependencies.Google.Dagger.compiler)
+
+    // testing
     testImplementation(Dependencies.Test.junit)
     androidTestImplementation(Dependencies.Test.Androidx.junit)
     androidTestImplementation(Dependencies.Test.Androidx.espresso)
     androidTestImplementation(Dependencies.Test.Androidx.Compose.junit4)
     debugImplementation(Dependencies.Test.Androidx.Compose.tooling)
     debugImplementation(Dependencies.Test.Androidx.Compose.testManifest)
+}
+
+kapt {
+    correctErrorTypes = true
 }
